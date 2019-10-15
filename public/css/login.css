@@ -1,0 +1,64 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  margin: auto;
+}
+
+.container .wrapper{
+  color: #fff;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: form 2s 1;
+}
+
+@keyframes form {
+
+  0%{opacity: 0; margin-top: -200px;}
+  25%{opacity: 0.25;}
+  50%{opacity: 0.50;}
+  75%{opacity: 0.75;}
+  100%{opacity: 1;}
+
+}
+
+#username{
+  width: 500px;
+}
+
+#password{
+  width: 500px;
+}
+
+.kosong{
+  background-color: red;
+}
+
+p.judul{
+  font-size: 30px;
+}
+
+img.image{
+  height: 100px;
+}
+
+form{
+  background-color: #6f6fd9;
+  padding: 50px;
+  border-radius: 30px;
+}
+
+p.registrasi{
+  float: right;
+  position: relative;
+}
+
+p.registrasi a{
+  text-decoration: none;
+  color: #fff;
+}
