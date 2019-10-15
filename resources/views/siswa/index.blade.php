@@ -1,8 +1,8 @@
 @extends('layout.template')
 @section('title' , 'Data Siswa || Admin')
 
-<script src="/js/jquery-3.4.1.min.js"></script>
-<script src="/js/siswa-script.js"></script>
+<script src="{{url('/js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{url('/js/siswa-script.js')}}"></script>
 
 @section('content')
 
@@ -63,8 +63,8 @@
             <td>{{ $a->nama }}</td>
             <td>{{ $a->kode_jur }}</td>
             <td>
-              <a class="btn btn-warning" href="/edit-siswa/edit/{{ $a->nim }}">Edit Data</a>
-              <a class="btn btn-danger" href="/hapus-siswa/hapus/{{ $a->nim }}">Hapus Data</a>
+              <a class="btn btn-warning" href="{{url('/edit-siswa/edit/{{ $a->nim }}')}}">Edit Data</a>
+              <a class="btn btn-danger" href="{{url('/hapus-siswa/hapus/{{ $a->nim }}')}}">Hapus Data</a>
             </td>
           </tr>
           <?php endforeach; ?>
@@ -90,7 +90,7 @@
 
             <!-- Awal Form  -->
 
-              <form method="post" action="/tambah-siswa/store">
+              <form method="post" action="{{url('/tambah-siswa/store')}}">
                   {{ csrf_field() }}
 
                   <div class="form-group">

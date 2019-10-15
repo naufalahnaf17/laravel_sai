@@ -15,13 +15,13 @@
 <br><br>
 
 <!-- Awal Form -->
-<form action="/edit-pembayaran/storeEdit/{{$bayar->no_bayar}}" method="post">
+<form action="{{url('/edit-pembayaran/storeEdit/{{$bayar->no_bayar}}')}}" method="post">
 
   {{ csrf_field() }}
   {{ method_field('PUT') }}
 
   <div style="float:right;" class="button mb-2">
-    <a class="btn btn-danger" href="/data-tagihan" name="back">Cancel</a>
+    <a class="btn btn-danger" href="{{url('/data-tagihan')}}" name="back">Cancel</a>
     <button class="btn btn-primary" type="submit" name="submit" style="color:#fff;">Save</button>
   </div>
 
@@ -66,7 +66,7 @@
         <td>{{$r->nilai}}</td>
         <td>{{$r->nilai}}</td>
         <td>
-          <a href="/pembayaran/bayar-tagihan/{{$r->no_tagihan}}/{{$r->nilai}}" class="btn btn-primary">Bayar</a>
+          <a href="{{url('/pembayaran/bayar-tagihan/{{$r->no_tagihan}}/{{$r->nilai}}')}}" class="btn btn-primary">Bayar</a>
         </td>
       </tr>
     <?php endforeach; ?>

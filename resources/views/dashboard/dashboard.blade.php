@@ -2,7 +2,7 @@
 @section('title' , 'Dashboard || Admin')
 
 @section('content')
-<link rel="stylesheet" href="/css/master.css">
+<link rel="stylesheet" href="{{url('/css/master.css')}}">
 <h4>Dashboard Admin</h4>
       <!-- Awal Card -->
       <div class="row">
@@ -10,9 +10,9 @@
           <div id="card-satu" class="card bg-warning">
             <div class="card-body justify-content-center">
               <center><h4 class="card-text">Siswa</h4>
-              <img id="cuk" src="/gambar/student.png"><br><br>
+              <img id="cuk" src="{{url('/gambar/student.png')}}"><br><br>
               <p class="card-text">{{ $siswa }}</p>
-              <a href="/data-siswa" class="btn btn-primary">Lihat Detail</a></center>
+              <a href="{{url('/data-siswa')}}" class="btn btn-primary">Lihat Detail</a></center>
             </div>
           </div>
         </div>
@@ -20,9 +20,9 @@
           <div id="card-satu" class="card bg-success">
             <div class="card-body justify-content-center">
               <center><h4 class="card-text">Tagihan</h4>
-              <img id="cuk" src="/gambar/notebook.png"><br><br>
+              <img id="cuk" src="{{url('/gambar/notebook.png')}}"><br><br>
               <p class="card-text">{{ $tagihan }}</p>
-              <a href="/data-tagihan" class="btn btn-primary">Lihat Detail</a></center>
+              <a href="{{url('/data-tagihan')}}" class="btn btn-primary">Lihat Detail</a></center>
             </div>
           </div>
         </div>
@@ -30,9 +30,9 @@
           <div id="card-satu" class="card bg-danger">
             <div class="card-body justify-content-center">
               <center><h4 class="card-text">Pembayaran</h4>
-              <img id="cuk" src="/gambar/money.png"><br><br>
+              <img id="cuk" src="{{url('/gambar/money.png')}}"><br><br>
               <p class="card-text"> {{ $bayar }} </p>
-              <a href="/data-pembayaran" class="btn btn-primary">Lihat Detail</a></center>
+              <a href="{{url('/data-pembayaran')}}" class="btn btn-primary">Lihat Detail</a></center>
             </div>
           </div>
         </div>

@@ -7,12 +7,12 @@
 <br><br>
 
 <!-- Awal Form -->
-<form action="/tambah-pembayaran/storePembayaran" method="post">
+<form action="{{url('/tambah-pembayaran/storePembayaran')}}" method="post">
 
   {{ csrf_field() }}
 
   <div style="float:right;" class="button mb-2">
-    <a class="btn btn-danger" href="/data-tagihan" name="back">Cancel</a>
+    <a class="btn btn-danger" href="{{url('/data-tagihan')}}" name="back">Cancel</a>
     <button class="btn btn-primary" type="submit" name="submit" style="color:#fff;">Save</button>
   </div>
 

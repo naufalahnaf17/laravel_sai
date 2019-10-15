@@ -25,9 +25,9 @@
       <div class="wrapper">
 
         <!-- Awal Form Login -->
-        <form action="/login/store" method="post">
+        <form action="{{url('/login/store')}}" method="post">
           {{ csrf_field() }}
-          <img  class="image" src="/gambar/group.png">
+          <img  class="image" src="{{url('/gambar/group.png')}}">
           <p class="judul">Login Form</p>
           <div id="username" class="form-group">
             <label>Username</label>

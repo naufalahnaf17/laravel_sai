@@ -1,8 +1,8 @@
 @extends('layout.template')
 @section('title' , 'Data Tagihan || Admin')
 
-<script src="/js/jquery-3.4.1.min.js"></script>
-<script src="/js/tagihan-script.js"></script>
+<script src="{{url('/js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{url('/js/tagihan-script.js')}}"></script>
 
 @section('content')
 
@@ -71,8 +71,8 @@
               <td> {{ $b->tanggal }} </td>
               <td> {{ $b->keterangan }} </td>
               <td>
-                <a class="btn btn-warning" href="/edit-tagihan/edit/{{ $b->no_tagihan }}/{{ $b->nim }}">Edit Tagihan</a>
-                <a class="btn btn-danger" href="/hapus-tagihan/hapus/{{ $b->no_tagihan }}">Hapus Tagihan</a>
+                <a class="btn btn-warning" href="{{url('/edit-tagihan/edit/{{ $b->no_tagihan }}/{{ $b->nim }}')}}">Edit Tagihan</a>
+                <a class="btn btn-danger" href="{{url('/hapus-tagihan/hapus/{{ $b->no_tagihan }}')}}">Hapus Tagihan</a>
               </td>
             </tr>
           <?php endforeach; ?>

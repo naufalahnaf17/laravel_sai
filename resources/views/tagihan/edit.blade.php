@@ -23,7 +23,7 @@
       <div class="modal-content">
         <div class="modal-body">
           <!-- Awal Form -->
-          <form action="/edit-detail/store/{{session('ada')}}" method="post">
+          <form action="{{url('/edit-detail/store/{{session('ada')}}')}}" method="post">
             {{ csrf_field() }}
 
             <div class="form-group mt-3">
@@ -70,13 +70,13 @@
     <?php endif; ?>
 
     <!-- Awal Form -->
-    <form action="/edit-tagihan/store/{{$tagihan->no_tagihan}}" method="post">
+    <form action="{{url('/edit-tagihan/store/{{$tagihan->no_tagihan}}')}}" method="post">
 
       {{ csrf_field() }}
       {{ method_field('PUT') }}
 
       <div style="float:right;" class="button mb-2">
-        <a class="btn btn-danger" href="/data-tagihan" name="back">Cancel</a>
+        <a class="btn btn-danger" href="{{url('/data-tagihan')}}" name="back">Cancel</a>
         <button class="btn btn-primary" type="submit" name="submit">Save</button>
       </div>
 
@@ -123,8 +123,8 @@
             <td>{{$r->kode_jenis}}</td>
             <td>{{$r->nilai}}</td>
             <td>
-              <a href="/edit-detail/{{$r->nilai}}" class="btn btn-warning">Edit</a>
-              <a href="/hapus-detail/store/{{$r->nilai}}" class="btn btn-danger">Hapus</a>
+              <a href="{{url('/edit-detail/{{$r->nilai}}')}}" class="btn btn-warning">Edit</a>
+              <a href="{{url('/hapus-detail/store/{{$r->nilai}}')}}" class="btn btn-danger">Hapus</a>
             </td>
           </tr>
         <?php endforeach; ?>
@@ -137,7 +137,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Edit Tagihan</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -145,7 +145,7 @@
           <div class="modal-body">
 
             <!-- Awal Form -->
-            <form action="/tambah-detail/{{ $tagihan->no_tagihan }}" method="post">
+            <form action="{{url('/tambah-detail/{{ $tagihan->no_tagihan }}')}}" method="post">
 
               {{ csrf_field() }}
 

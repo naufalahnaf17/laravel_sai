@@ -1,8 +1,8 @@
 @extends('layout.template')
 @section('title' , 'Data Pembayaran || Admin')
 
-<script src="/js/jquery-3.4.1.min.js"></script>
-<script src="/js/pembayaran-script.js"></script>
+<script src="{{url('/js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{url('/js/pembayaran-script.js')}}"></script>
 
 @section('content')
 
@@ -13,7 +13,7 @@
     <?php endif; ?>
 
     <h3>Data Pembayaran</h3>
-    <a href="/tambah-pembayaran" id="btn-tambah" class="btn btn-success">Tambah Data</a>
+    <a href="{{url('/tambah-pembayaran')}}" id="btn-tambah" class="btn btn-success">Tambah Data</a>
     <br><br>
 
 
@@ -80,8 +80,8 @@
             <td> {{ $c->keterangan }} </td>
             <td> {{ $c->periode }} </td>
             <td>
-              <a class="btn btn-warning" href="/edit-pembayaran/{{$c->no_bayar}}/{{$c->nim}}">Ubah</a>
-              <a class="btn btn-danger" href="/hapus-pembayaran/{{$c->no_bayar}}">Hapus</a>
+              <a class="btn btn-warning" href="{{url('/edit-pembayaran/{{$c->no_bayar}}/{{$c->nim}}')}}">Ubah</a>
+              <a class="btn btn-danger" href="{{url('/hapus-pembayaran/{{$c->no_bayar}}')}}">Hapus</a>
             </td>
           </tr>
         <?php endforeach; ?>
