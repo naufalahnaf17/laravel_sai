@@ -37,7 +37,7 @@ $siswa = query($query);
         <td><?= $a['nama'] ?></td>
         <td><?= $a['kode_jur'] ?></td>
         <td>
-          <a class="btn btn-warning" href="">Edit Data</a>
+          <a class="btn btn-warning" href="{{ url('/edit') }}">Edit Data</a>
         </td>
       </tr>
       <?php endforeach; ?>
