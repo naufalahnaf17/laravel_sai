@@ -39,8 +39,8 @@ $tagihan = query($query);
           <td> <?= $b['tanggal'] ?> </td>
           <td> <?= $b['keterangan'] ?> </td>
           <td>
-            <a class="btn btn-warning" href="{{url('/edit-tagihan/edit/' .<?= $b['no_tagihan'] ?>. '/' .<?= $b['nim'] ?>. '/')}}">Edit Tagihan</a>
-            <a class="btn btn-danger" href="{{url('/hapus-tagihan/hapus/' .<?= $b['no_tagihan'] ?>. '/')}}">Hapus Tagihan</a>
+            <a class="btn btn-warning" href="<?= url('edit-tagihan/edit/' .$b['no_tagihan']. '/' .$b['nim']. '/') ?>">Edit Tagihan</a>
+            <a class="btn btn-danger" href="{{url('/hapus-tagihan/hapus/<?= $b['no_tagihan'] ?>')}}">Hapus Tagihan</a>
           </td>
         </tr>
       <?php endforeach; ?>
