@@ -75,8 +75,4 @@ class DataSiswaController extends Controller
       return redirect('/data-siswa')->with('edited' , 'Data Berhasil Di Edit');
    }
 
-   public function search(Request $request){
-     echo $request->search;
-   }
-
 }

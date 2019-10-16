@@ -48,5 +48,3 @@ Route::get('/hapus-pembayaran/{no_bayar}' , 'DataPembayaranController@hapus');
 Route::put('/edit-pembayaran/storeEdit/{no_bayar}' , 'DataPembayaranController@storeEdit');
 Route::get('/edit-pembayaran/{no_bayar}/{nim}' , 'DataPembayaranController@editPembayaran');
 Route::get('/pembayaran/bayar-tagihan/{no_tagihan}/{nilai}' , 'DataPembayaranController@bayar');
-
-Route::post('/siswa/search' , 'DataSiswaController@search');
