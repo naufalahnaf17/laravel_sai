@@ -38,7 +38,7 @@ $siswa = query($query);
         <td><?= $a['nama'] ?></td>
         <td><?= $a['kode_jur'] ?></td>
         <td>
-          <a class="btn btn-warning" href="">Edit Data</a>
+          <a class="btn btn-warning" href="<?= $a['nim'] ?>">Edit Data</a>
           <a class="btn btn-danger" href="">Hapus Data</a>
         </td>
       </tr>
