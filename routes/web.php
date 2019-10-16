@@ -49,4 +49,4 @@ Route::put('/edit-pembayaran/storeEdit/{no_bayar}' , 'DataPembayaranController@s
 Route::get('/edit-pembayaran/{no_bayar}/{nim}' , 'DataPembayaranController@editPembayaran');
 Route::get('/pembayaran/bayar-tagihan/{no_tagihan}/{nilai}' , 'DataPembayaranController@bayar');
 
-Route::post('/siswa/search' , 'DataSiswaController@search()');
+Route::post('/siswa/search' , 'DataSiswaController@search');
