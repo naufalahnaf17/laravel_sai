@@ -77,10 +77,7 @@ class DataSiswaController extends Controller
 
    public function search(Request $request){
 
-     if ($request->search {
-
-       $hasil = DB::table('dev_siswa')->where('nama' , $request->search)->get();
-     }
+     $hasil = DB::table('dev_siswa')->where('nama' , $request->search)->get();
 
      if ($hasil) {
 
