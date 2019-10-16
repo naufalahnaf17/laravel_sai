@@ -38,8 +38,8 @@ $siswa = query($query);
         <td><?= $a['nama'] ?></td>
         <td><?= $a['kode_jur'] ?></td>
         <td>
-          <a class="btn btn-warning" href="{{ url('/edit-siswa/edit/' .$a['nim']. '/') }}">Edit Data</a>
-          <a class="btn btn-danger" href="{{ url('/hapus-siswa/hapus/' .$a['nim']. '/') }}">Hapus Data</a>
+          <a class="btn btn-warning" href="<?= '/edit-siswa/edit/' .$a['nim']. '/' ?>">Edit Data</a>
+          <a class="btn btn-danger" href="<?= '/hapus-siswa/hapus/' .$a['nim']. '/' ?>">Hapus Data</a>
         </td>
       </tr>
       <?php endforeach; ?>
