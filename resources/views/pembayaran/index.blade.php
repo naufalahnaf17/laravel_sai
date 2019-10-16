@@ -1,9 +1,6 @@
 @extends('layout.template')
 @section('title' , 'Data Pembayaran || Admin')
 
-<script src="{{url('/js/jquery-3.4.1.min.js')}}"></script>
-<script src="{{url('/js/pembayaran-script.js')}}"></script>
-
 @section('content')
 
     <?php if (session('tidak')): ?>

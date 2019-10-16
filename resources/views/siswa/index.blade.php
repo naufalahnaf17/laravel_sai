@@ -1,8 +1,6 @@
 @extends('layout.template')
 @section('title' , 'Data Siswa || Admin')
 
-<script src="{{url('/js/jquery-3.4.1.min.js')}}"></script>
-<script src="{{url('/js/siswa-script.js')}}"></script>
 
 @section('content')
 
