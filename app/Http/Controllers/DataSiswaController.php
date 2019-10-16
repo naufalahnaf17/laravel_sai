@@ -75,4 +75,22 @@ class DataSiswaController extends Controller
       return redirect('/data-siswa')->with('edited' , 'Data Berhasil Di Edit');
    }
 
+   public function search(Request $request){
+
+     if ($request->search {
+       $hasil = DB::table('dev_siswa')
+                ->where('nama' , 'like' , '%' .$request->search. '%' )
+                ->get();
+     }
+
+     if ($hasil) {
+
+       foreach ($hasil as $a) {
+         echo '<tr> <td>' . $hasil->nim . '</td> <td>' . $hasil->nama . '</td> <td>' .$hasil->kode_jur. '</td> </tr>' ;
+       }
+
+     }
+
+   }
+
 }
