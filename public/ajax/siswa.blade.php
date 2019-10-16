@@ -38,7 +38,7 @@ $siswa = query($query);
         <td><?= $a['nama'] ?></td>
         <td><?= $a['kode_jur'] ?></td>
         <td>
-          <?php dd('$a->nim'); ?>
+          <a class="btn btn-warning" href=" <?php url('/edit-siswa/edit/<?= $a['nim'] ?>') ?> ">Edit Data</a>
         </td>
       </tr>
       <?php endforeach; ?>
