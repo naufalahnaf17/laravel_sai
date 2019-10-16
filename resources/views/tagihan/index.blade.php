@@ -8,7 +8,7 @@
 
     <h3>Data Tagihan</h3>
 
-    <a style="float:right;margin-right:30px;" href="/tambah-tagihan" class="btn btn-primary">Tambah Tagihan</a>
+    <a style="float:right;margin-right:30px;" href="{{ url('/tambah-tagihan') }}" class="btn btn-primary">Tambah Tagihan</a>
     <br class="mt-2"><hr>
 
 
@@ -71,8 +71,8 @@
               <td> {{ $b->tanggal }} </td>
               <td> {{ $b->keterangan }} </td>
               <td>
-                <a class="btn btn-warning" href="{{url('/edit-tagihan/edit/{{ $b->no_tagihan }}/{{ $b->nim }}')}}">Edit Tagihan</a>
-                <a class="btn btn-danger" href="{{url('/hapus-tagihan/hapus/{{ $b->no_tagihan }}')}}">Hapus Tagihan</a>
+                <a class="btn btn-warning" href="{{ url('/edit-tagihan/edit/' .$b->no_tagihan. '/' .$b->nim. '/') }}">Edit Tagihan</a>
+                <a class="btn btn-danger" href="{{ url('/hapus-tagihan/hapus/' .$b->no_tagihan. '/') }}">Hapus Tagihan</a>
               </td>
             </tr>
           <?php endforeach; ?>

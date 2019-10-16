@@ -15,7 +15,7 @@
 <br><br>
 
 <!-- Awal Form -->
-<form action="{{url('/edit-pembayaran/storeEdit/{{$bayar->no_bayar}}')}}" method="post">
+<form action="{{ url('/edit-pembayaran/storeEdit/' .$bayar->no_bayar. '/') }}" method="post">
 
   {{ csrf_field() }}
   {{ method_field('PUT') }}
@@ -66,7 +66,7 @@
         <td>{{$r->nilai}}</td>
         <td>{{$r->nilai}}</td>
         <td>
-          <a href="{{url('/pembayaran/bayar-tagihan/{{$r->no_tagihan}}/{{$r->nilai}}')}}" class="btn btn-primary">Bayar</a>
+          <a href="{{ url('/pembayaran/bayar-tagihan/' .$r->no_tagihan. '/' .$r->nilai. '/') }}" class="btn btn-primary">Bayar</a>
         </td>
       </tr>
     <?php endforeach; ?>

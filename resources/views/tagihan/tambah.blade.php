@@ -54,7 +54,7 @@
       </div>
 
       <div style="float:right;" class="button mb-2">
-        <a class="btn btn-danger" href="{{url('/data-tagihan')}}" name="back">Cancel</a>
+        <a class="btn btn-danger" href="{{ url('/data-tagihan') }}" name="back">Cancel</a>
         <button class="btn btn-primary" type="submit" name="submit">Save</button>
       </div>
     </form>

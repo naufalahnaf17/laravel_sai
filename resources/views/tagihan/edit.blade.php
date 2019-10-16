@@ -23,7 +23,7 @@
       <div class="modal-content">
         <div class="modal-body">
           <!-- Awal Form -->
-          <form action="{{url('/edit-detail/store/{{session('ada')}}')}}" method="post">
+          <form action="{{ url('/edit-detail/store/' .session('ada'). '/') }}" method="post">
             {{ csrf_field() }}
 
             <div class="form-group mt-3">
@@ -70,7 +70,7 @@
     <?php endif; ?>
 
     <!-- Awal Form -->
-    <form action="{{url('/edit-tagihan/store/{{$tagihan->no_tagihan}}')}}" method="post">
+    <form action="{{ url('/edit-tagihan/store/' .$tagihan->no_tagihan. '/') }}" method="post">
 
       {{ csrf_field() }}
       {{ method_field('PUT') }}
@@ -123,8 +123,8 @@
             <td>{{$r->kode_jenis}}</td>
             <td>{{$r->nilai}}</td>
             <td>
-              <a href="{{url('/edit-detail/{{$r->nilai}}')}}" class="btn btn-warning">Edit</a>
-              <a href="{{url('/hapus-detail/store/{{$r->nilai}}')}}" class="btn btn-danger">Hapus</a>
+              <a href="{{ url('/edit-detail/' .$r->nilai. '/') }}" class="btn btn-warning">Edit</a>
+              <a href="{{ url('/hapus-detail/store/' .$r->nilai. '/') }}" class="btn btn-danger">Hapus</a>
             </td>
           </tr>
         <?php endforeach; ?>
@@ -145,7 +145,7 @@
           <div class="modal-body">
 
             <!-- Awal Form -->
-            <form action="{{url('/tambah-detail/{{ $tagihan->no_tagihan }}')}}" method="post">
+            <form action="{{ url('/tambah-detail/' .$tagihan->no_tagihan. '/') }}" method="post">
 
               {{ csrf_field() }}
 

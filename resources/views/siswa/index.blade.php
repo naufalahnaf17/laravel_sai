@@ -90,7 +90,7 @@
 
             <!-- Awal Form  -->
 
-              <form method="post" action="{{url('/tambah-siswa/store')}}">
+              <form method="post" action="{{ url('/tambah-siswa/store') }}">
                   {{ csrf_field() }}
 
                   <div class="form-group">

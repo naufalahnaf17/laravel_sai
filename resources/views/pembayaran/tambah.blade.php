@@ -55,6 +55,7 @@
     </tr>
   </thead>
   <tbody>
+    <!-- kosong -->
   </tbody>
 </table>
 <!-- Akhir Table -->

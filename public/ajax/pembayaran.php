@@ -44,8 +44,8 @@ $bayar = query($query);
         <td> <?= $c['keterangan'] ?> </td>
         <td> <?= $c['periode'] ?> </td>
         <td>
-          <a class="btn btn-warning" href="{{url('/edit-pembayaran/<?= $c['no_bayar'] ?>/<?= $c['nim'] ?>')}}">Ubah</a>
-          <a class="btn btn-danger" href="{{url('/hapus-pembayaran/<?= $c['no_bayar'] ?>')}}">Hapus</a>
+          <a class="btn btn-warning" href="{{ url('/edit-pembayaran/' .<?= $c['no_bayar'] ?>. '/' .<?= $c['nim'] ?>. '/') }}">Ubah</a>
+          <a class="btn btn-danger" href="{{ url('/hapus-pembayaran/' .<?= $c['no_bayar'] ?>. '/') }}">Hapus</a>
         </td>
       </tr>
     <?php endforeach; ?>
