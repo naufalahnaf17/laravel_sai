@@ -1,7 +1,17 @@
 $(document).ready( function() {
 
   $('#keyword').on('keyup' , function() {
-    $('#container').load('ajax/siswa.php?keyword=' + $('#keyword').val());
+
+    $.ajax({
+         type: "POST",
+         url: "{{ url('/siswa/search') }}",
+         data: "keyword=" + $('#keyword').val();
+         success: function(response){
+              console.log('berhasil');
+        }
+
+    });
+
   });
 
 
