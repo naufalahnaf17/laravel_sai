@@ -2,6 +2,7 @@
 @section('title' , 'Data Siswa || Admin')
 
 <script src="{{url('/js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{url('/js/siswa-script.js')}}"></script>
 
 @section('content')
 
@@ -12,7 +13,9 @@
 
 
     <div class="live-search" style="position:relative;height:50px;">
-      <input type="text" class="form-control" onkeyup="search()" name="keyword" id="keyword" size="40" placeholder="Cari Mahasiswa" autocomplete="off">
+      <form action="" method="post">
+        <input type="text" class="form-control" name="keyword" id="keyword" size="40" placeholder="Cari Mahasiswa" autocomplete="off">
+      </form>
     </div>
 
     <!-- Kondisi Awal Apabila Terjadi Sesuatu -->
@@ -52,7 +55,7 @@
           <th scope="col">Aksi</th>
         </tr>
       </thead>
-      <tbody id="success">
+      <tbody>
         <!-- Awal Data -->
           <?php foreach ($siswa as $a): ?>
           <tr>
@@ -138,31 +141,5 @@
       </div>
     </div>
     <!-- Akhir Modal Tambah Siswa -->
-
-    <!-- live search javascript -->
-    <script type="text/javascript">
-
-      function search(){
-        var search = $('#keyword').val();
-
-
-        $.ajax({
-          type:"POST",
-          url: "{{ url('/siswa-search') }}",
-          data:{
-              search:search
-          },
-          datatype: 'html',
-
-          success:function(response){
-            console.log(response);
-            $('#success').html(response);
-          }
-
-        });
-
-      }
-
-    </script>
 
 @endsection
