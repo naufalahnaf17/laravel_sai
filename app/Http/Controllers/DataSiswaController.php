@@ -78,7 +78,13 @@ class DataSiswaController extends Controller
    public function search(Request $request){
 
      if ($request->search {
-       $hasil = Siswa::where('nama', $request->search)->orWhere('name', 'like', '%' . $request->nama . '%')->get();
+
+
+$hasil = DB::table('dev_siswa')
+        ->where('nama', 'like', '%' . $request->search . '%')
+        ->get();
+
+
      }
 
      if ($hasil) {
