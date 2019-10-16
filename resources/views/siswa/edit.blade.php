@@ -10,7 +10,6 @@
     <p>  </p>
 
     <!-- Awal Form -->
-    {{ $siswa->nim }}
     <form action="{{ url('/edit-siswa/update/' .$siswa->first()->nim. '/') }}" method="post">
 
       {{ csrf_field() }}
