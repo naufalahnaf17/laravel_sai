@@ -31,7 +31,6 @@ $bayar = query($query);
       <th scope="col">NIM</th>
       <th scope="col">Keterangan</th>
       <th scope="col">Periode</th>
-      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -43,10 +42,6 @@ $bayar = query($query);
         <td> <?= $c['nim'] ?> </td>
         <td> <?= $c['keterangan'] ?> </td>
         <td> <?= $c['periode'] ?> </td>
-        <td>
-          <a class="btn btn-warning" href="{{ url('/edit-pembayaran/' .<?= $c['no_bayar'] ?>. '/' .<?= $c['nim'] ?>. '/') }}">Ubah</a>
-          <a class="btn btn-danger" href="{{ url('/hapus-pembayaran/' .<?= $c['no_bayar'] ?>. '/') }}">Hapus</a>
-        </td>
       </tr>
     <?php endforeach; ?>
     <!-- Akhir Data -->

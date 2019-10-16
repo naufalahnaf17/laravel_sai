@@ -26,7 +26,6 @@ $siswa = query($query);
       <th scope="col">NIM</th>
       <th scope="col">Nama</th>
       <th scope="col">Jurusan</th>
-      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -36,9 +35,6 @@ $siswa = query($query);
         <td><?= $a['nim'] ?></td>
         <td><?= $a['nama'] ?></td>
         <td><?= $a['kode_jur'] ?></td>
-        <td>
-          <a class="btn btn-warning" href="{{ url('/edit') }}">Edit Data</a>
-        </td>
       </tr>
       <?php endforeach; ?>
     <!-- Akhir Data -->

@@ -27,7 +27,6 @@ $tagihan = query($query);
       <th scope="col">Nim</th>
       <th scope="col">Tanggal</th>
       <th scope="col">Keterangan</th>
-      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -38,10 +37,6 @@ $tagihan = query($query);
           <td> <?= $b['nim'] ?> </td>
           <td> <?= $b['tanggal'] ?> </td>
           <td> <?= $b['keterangan'] ?> </td>
-          <td>
-            <a class="btn btn-warning" href="<?= url('edit-tagihan/edit/' .$b['no_tagihan']. '/' .$b['nim']. '/') ?>">Edit Tagihan</a>
-            <a class="btn btn-danger" href="{{url('/hapus-tagihan/hapus/<?= $b['no_tagihan'] ?>')}}">Hapus Tagihan</a>
-          </td>
         </tr>
       <?php endforeach; ?>
     <!-- Akhir Data -->
