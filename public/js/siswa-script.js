@@ -1,7 +1,7 @@
 $(document).ready( function() {
 
   $('#keyword').on('keyup' , function() {
-    $('#container').load('ajax/siswa.blade.php?keyword=' + $('#keyword').val());
+    $('#container').load('ajax/siswa.php?keyword=' + $('#keyword').val());
   });
 
 
