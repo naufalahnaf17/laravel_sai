@@ -144,21 +144,7 @@
 
       function search(){
         var search = $('#keyword').val();
-        $.ajax({
-          type:"POST",
-          url: "{{ url('/siswa-search') }}",
-          data:{
-              search:search
-          },
-          datatype: 'html',
-
-          success:function(response){
-            console.log(response);
-            $('#success').html(response);
-          }
-
-        });
-
+        console.log(search);
       }
 
     </script>
