@@ -16,6 +16,7 @@ $keyword = $_GET["keyword"];
 $query = "SELECT * FROM dev_siswa WHERE nama LIKE '%$keyword%' ";
 $siswa = query($query);
 
+$url = url('/edit-siswa/edit/' .$siswa[0]['nim']. '/');
 
 ?>
 
@@ -38,7 +39,7 @@ $siswa = query($query);
         <td><?= $a['nama'] ?></td>
         <td><?= $a['kode_jur'] ?></td>
         <td>
-          <a class="btn btn-warning" href="<?= $a['nim'] ?>">Edit Data</a>
+          <a class="btn btn-warning" href="<?= $url ?>">Edit Data</a>
           <a class="btn btn-danger" href="">Hapus Data</a>
         </td>
       </tr>
