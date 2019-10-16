@@ -1,6 +1,9 @@
 @extends('layout.template')
 @section('title' , 'Data Tagihan || Admin')
 
+<script src="{{url('/js/jquery-3.4.1.min.js')}}"></script>
+<script src="{{url('/js/tagihan-script.js')}}"></script>
+
 @section('content')
 
     <h3>Data Tagihan</h3>
